@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const port = 4545;
+const port = 4547;
 const bodyParser = require('body-parser');
 const connectDB = require('./config/dbConfig');
 const createDogRoutes = require('./routes/createDogRoutes');
