@@ -3,8 +3,8 @@ name: Deploy Backend
 on:
   push:
     branches:
-      - test
-#Test N4
+      - test  
+#Test N6
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
@@ -16,15 +16,15 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '20.17.0'
+          node-version: '20.17.0'  
 
       - name: Install dependencies
         run: |
+          cd service
           npm install
 
       - name: Start backend
         env:
           MONGO_URI: ${{ secrets.MONGO_URI }}
         run: |
-          npm start
-
+          node index.js
