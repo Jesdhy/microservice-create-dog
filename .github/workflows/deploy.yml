@@ -4,7 +4,7 @@ on:
   push:
     branches:
       - test  
-#Test N6
+#Test N7
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
@@ -27,4 +27,5 @@ jobs:
         env:
           MONGO_URI: ${{ secrets.MONGO_URI }}
         run: |
+          cd service
           node index.js
