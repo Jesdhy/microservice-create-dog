@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
-const createdogcontroller = require('../controllers/createDogController');
-const Dog = require('../models/dogModel');
+const createdogcontroller = require('C:/Users/Jessy/Desktop/microservice-create-dog/service/controllers/createDogController');
+const Dog = require('C:/Users/Jessy/Desktop/microservice-create-dog/service/models/dogModel');
 const { title } = require('process');
 
 router.get('/', createdogcontroller);

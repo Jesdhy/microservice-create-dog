@@ -1,5 +1,5 @@
 const { default: mongoose } = require('mongoose');
-const db = require('../config/dbConfig');
+const db = require('C:/Users/Jessy/Desktop/microservice-create-dog/service/config/dbConfig');
 
 const createDogController = (req, res) => {
     try {
