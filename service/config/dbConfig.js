@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 const connectDB = async () => {
     try {
-        const mongoDB = 'mongodb+srv://jdpincha:w85KnSh3CDvNsRb9@clusterdog.u4ndr.mongodb.net/Dog-create?retryWrites=true&w=majority&appName=ClusterDog';
+        const mongoDB = process.env.MONGO_URI;
         mongoose.connect(mongoDB);
         const db = mongoose.connection;
 
