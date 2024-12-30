@@ -1,10 +1,10 @@
 const express = require('express');
 const cors = require('cors'); 
 const app = express();
-const port = 4547;
-const connectDB = require('C:/Users/Jessy/Desktop/microservice-create-dog/service/config/dbConfig'); 
-const createDogRoutes = require('C:/Users/Jessy/Desktop/microservice-create-dog/service/routes/createDogRoutes');
 const path = require('path');
+const port = 4547;
+const connectDB = require('./config/dbConfig');
+const createDogRoutes = require('./routes/createDogRoutes');
 
 app.use(cors());  
 
