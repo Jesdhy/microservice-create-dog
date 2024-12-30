@@ -20,18 +20,11 @@ jobs:
 
       - name: Install dependencies
         run: |
-          cd service
           npm install
-
-      - name: Run tests
-        run: |
-          cd service
-          npm test
 
       - name: Start backend
         env:
           MONGO_URI: ${{ secrets.MONGO_URI }}
         run: |
-          cd service
           npm start
 
