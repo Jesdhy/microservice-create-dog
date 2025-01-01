@@ -1,8 +1,9 @@
 const mongoose = require('mongoose');
+require('dotenv').config();
 
 const connectDB = async () => {
     try {
-        const mongoDB = process.env.MONGO_URI;
+        const mongoDB = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@clusterdog.u4ndr.mongodb.net/${process.env.DB_NAME}?retryWrites=true&w=majority&appName=${process.env.DB_CLUSTER}`;
         mongoose.connect(mongoDB);
         const db = mongoose.connection;
 

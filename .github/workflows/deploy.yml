@@ -25,7 +25,10 @@ jobs:
 
       - name: Start backend
         env:
-          MONGO_URI: ${{ secrets.MONGO_URI }}
+          DB_USER: ${{ secrets.DB_USER }}
+          DB_PASS: ${{ secrets.DB_PASS }}
+          DB_NAME: ${{ secrets.DB_NAME }}
+          DB_CLUSTER: ${{ secrets.DB_CLUSTER }}
         run: |
           cd service
           node index.js
